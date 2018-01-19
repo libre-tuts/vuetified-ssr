@@ -1,8 +1,8 @@
 <template>
 <v-menu :nudge-width="100">
     <v-toolbar-title slot="activator">
-        {{ locale }}
-        <v-icon dark>arrow_drop_down</v-icon>
+        <span :class="[textColor]">{{ locale }}</span>
+        <fa icon="caret-down" :fixed-width="true"  :class="[iconColor]"/>
     </v-toolbar-title>
     <v-list>
         <v-list-tile v-for="(value, key) in locales" :key="key" @click="setLocale(key)">
@@ -16,6 +16,7 @@
 import { mapGetters } from 'vuex'
 import { loadMessages } from '~/plugins/i18n'
 export default {
+  props: ['textColor', 'iconColor'],
   computed: mapGetters({
     locale: 'lang/locale',
     locales: 'lang/locales'

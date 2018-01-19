@@ -2,18 +2,18 @@ import Vue from 'vue'
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
-// import { } from '@fortawesome/fontawesome-free-regular/shakable.es'
+// import { } from '@fortawesome/fontawesome-free-regular/shakable.js'
 
 import {
-  faUser, faLock, faSignOutAlt, faCog
-} from '@fortawesome/fontawesome-free-solid/shakable.es'
+  faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
+} from '@fortawesome/fontawesome-free-solid/shakable.js'
 
-import {
-  faGithub
-} from '@fortawesome/fontawesome-free-brands/shakable.es'
+// import {
+//   faGithub
+// } from '@fortawesome/fontawesome-free-brands/shakable.js'
 
 fontawesome.library.add(
-  faUser, faLock, faSignOutAlt, faCog, faGithub
+  faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
 )
 
 fontawesome.config.autoAddCss = false

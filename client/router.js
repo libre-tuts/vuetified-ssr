@@ -3,8 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const Home = () => import('~/pages/index').then(m => m.default || m)
-const Inspire = () => import('~/pages/inspire').then(m => m.default || m)
+const Home = () => import('~/pages/home').then(m => m.default || m)
+const ErrorPage = () => import('~/pages/error').then(m => m.default || m)
 
 // const Login = () => import('~/pages/auth/login').then(m => m.default || m)
 // const Register = () => import('~/pages/auth/register').then(m => m.default || m)
@@ -17,8 +17,7 @@ const Inspire = () => import('~/pages/inspire').then(m => m.default || m)
 
 const routes = [
   { path: '/', name: 'home', component: Home },
-  { path: '/inspire', name: 'inspire', component: Inspire },
-  { path: '*', component: Home }
+  { path: '*', name: 'pagenotfound', component: ErrorPage }
   // { path: '/login', name: 'login', component: Login },
   // { path: '/register', name: 'register', component: Register },
   // { path: '/password/reset', name: 'password.request', component: PasswordRequest },

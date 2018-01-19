@@ -20,6 +20,7 @@ export default {
   components: {
     NuxtLogo
   },
+  layout: 'simple',
   head () {
     return { title: this.$t('go_home') }
   }

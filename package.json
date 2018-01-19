@@ -14,21 +14,25 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.1",
-    "@fortawesome/fontawesome-free-brands": "^5.0.3",
+    "@fortawesome/fontawesome-free-brands": "^5.0.4",
     "@fortawesome/fontawesome-free-regular": "^5.0.3",
     "@fortawesome/fontawesome-free-solid": "^5.0.3",
     "@fortawesome/vue-fontawesome": "^0.0.22",
     "@nuxtjs/router": "^1.0.1",
+    "@nuxtjs/vuetify": "^0.4.0",
     "axios": "^0.17.1",
+    "babel-plugin-transform-imports": "^1.4.1",
     "dotenv": "^4.0.0",
     "js-cookie": "^2.2.0",
     "node-sass": "^4.7.2",
     "nuxt": "^1.1.1",
+    "nuxt-env": "^0.0.2",
     "sass-loader": "^6.0.6",
     "sweetalert2": "^7.3.5",
     "vform": "^0.8.1",
     "vue-i18n": "^7.3.4",
-    "vuetify": "^1.0.0-beta.4"
+    "vuetify": "^1.0.0-beta.4",
+    "webpack-node-externals": "^1.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
