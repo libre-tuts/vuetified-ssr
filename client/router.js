@@ -17,7 +17,7 @@ const ErrorPage = () => import('~/pages/error').then(m => m.default || m)
 
 const routes = [
   { path: '/', name: 'home', component: Home },
-  { path: '*', name: 'pagenotfound', component: ErrorPage }
+  { path: '*', name: '404', component: ErrorPage }
   // { path: '/login', name: 'login', component: Login },
   // { path: '/register', name: 'register', component: Register },
   // { path: '/password/reset', name: 'password.request', component: PasswordRequest },
