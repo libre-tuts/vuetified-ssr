@@ -2,6 +2,8 @@
   "all": "所有",
   "ok": "确定",
   "cancel": "取消",
+  "support": "支持",
+  "dashboard": "仪表板",
   "error_alert_title": "错误...",
   "error_alert_text": "遇到一些错误，请稍后重试~",
   "token_expired_alert_title": "验证过期!",

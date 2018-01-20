@@ -2,6 +2,8 @@
   "all": "Todas",
   "ok": "De Acuerdo",
   "cancel": "Cancelar",
+  "support": "Apoyo",
+  "dashboard": "Tablero",
   "error_alert_title": "Ha ocurrido un problema",
   "error_alert_text": "¡Algo salió mal! Inténtalo de nuevo.",
   "token_expired_alert_title": "!Sesión Expirada!",
