@@ -93,9 +93,10 @@
             >
               <v-btn 
                 block 
+                :loading="form.busy"
                 :disabled="!valid" 
                 type="submit" 
-                color="accent"
+                :color="indicator"
               >
                 Sign In 
                 <v-icon right>keyboard_tab</v-icon>
@@ -183,7 +184,14 @@ export default {
     },
     ...mapState({
       isAuthenticated: 'token'
-    })
+    }),
+    indicator () {
+      if (this.form.busy) {
+        return 'error'
+      } else {
+        return 'accent'
+      }
+    }
   },
   mounted () {
     const self = this
@@ -212,6 +220,7 @@ export default {
     },
     async login () {
       if (this.$refs.form.validate()) {
+        this.form.busy = true
         // Submit the form.
         const { data } = await this.form.post('/login')
 
@@ -223,7 +232,7 @@ export default {
 
         // Fetch the user.
         await this.$store.dispatch('auth/fetchUser')
-
+        this.form.busy = false
         // Redirect home.
         this.$router.push({ name: 'home' })
       }

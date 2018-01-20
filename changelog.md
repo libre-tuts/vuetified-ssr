@@ -1,9 +1,21 @@
 ### Version 1.0.2
+- added vuetify
+- Bumped version to 1.1.0
+- Bumped version to 1.1.0
+- change me log added
+- added language
+- Bumped version to 1.0.1
+- edited change log
+
+### Version 1.0.2
 - working login page
 - added error page template
 - added dashboard layout
 - added home layout
 - added translation 
+- added env LOADING_COLOR for loading
+- working register page
+- fix loading , and disable, rules for password confirmation
 
 ### Version 1.0.1
 - added vuetify ala carte

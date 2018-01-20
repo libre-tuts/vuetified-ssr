@@ -40,7 +40,7 @@ module.exports = {
     ]
   },
 
-  loading: { color: '#007bff' },
+  loading: { color: process.env.LOADING_COLOR || '#B9F6CA' },
 
   router: {
     middleware: ['locale', 'check-auth']
