@@ -33,26 +33,14 @@
 
 
 <script>
-// import swal from 'sweetalert2'
 import NuxtLogo from '../components/NuxtLogo.vue'
 export default {
   components: {
     NuxtLogo
   },
-  layout: 'default',
+  layout: 'home',
   head () {
     return { title: this.$t('home') }
-  },
-  mounted () {
-    // swal({
-    //   type: 'success',
-    //   title: 'test',
-    //   text: 'swal',
-    //   reverseButtons: true,
-    //   confirmButtonText: 'ok',
-    //   cancelButtonText: 'cancer',
-    //   focusConfirm: false
-    // })
   }
 }
 </script>

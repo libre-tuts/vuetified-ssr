@@ -25,7 +25,7 @@
       color="white"
       to="/login"
     >
-      <span :class="[textClass]">Login</span>
+      <span :class="[textClass]">{{ login }}</span>
       <fa icon="sign-in-alt" pull="right" size="lg" :class="[iconClass]"/>
     </v-btn>
     <v-btn 
@@ -34,7 +34,7 @@
       color="white"
       to="/register"
     >
-      <span :class="[textClass]">Register</span>
+      <span :class="[textClass]">{{ register }}</span>
       <fa icon="user-plus" pull="right" size="lg" flip="horizontal" :class="[iconClass]"/>
     </v-btn>
     <v-btn 
@@ -43,7 +43,7 @@
       color="white"
       to="/dashboard"
     >
-      <span :class="[textClass]">Dashboard</span>
+      <span :class="[textClass]">{{ dashboard }}</span>
       <fa icon="tachometer-alt" pull="right" size="lg" flip="horizontal" :class="[iconClass]"/>
     </v-btn>
     <v-btn 
@@ -51,7 +51,7 @@
       color="white"
       to="/support"
     >
-      <span :class="[textClass]">Contact Us</span>
+      <span :class="[textClass]">{{ support }}</span>
       <fa icon="life-ring" pull="right" size="lg" :class="[iconClass]"/>
     </v-btn>
     <v-btn 
@@ -60,7 +60,7 @@
       color="white"
       to="/logout"
     >
-      <span :class="[textClass]">Logout</span>
+      <span :class="[textClass]">{{ logout }}</span>
       <fa icon="sign-out-alt" pull="right" size="lg" :class="[iconClass]"/>
     </v-btn>
     <locale-dropdown text-color="white--text" :icon-color="[iconClass]"/>
@@ -92,6 +92,21 @@ export default {
     },
     logo () {
       return '/v.png'
+    },
+    login () {
+      return this.$t('login')
+    },
+    logout () {
+      return this.$t('logout')
+    },
+    register () {
+      return this.$t('register')
+    },
+    dashboard () {
+      return this.$t('dashboard')
+    },
+    support () {
+      return this.$t('support')
     }
   }
 }

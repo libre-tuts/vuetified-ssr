@@ -26,7 +26,8 @@ import {
   VAlert,
   VBreadcrumbs,
   VParallax,
-  VMenu
+  VMenu,
+  VForm
 } from 'vuetify'
 
 Vue.use(Vuetify, {
@@ -54,7 +55,8 @@ Vue.use(Vuetify, {
     VAlert,
     VBreadcrumbs,
     VParallax,
-    VMenu
+    VMenu,
+    VForm
   },
   //! Define Your Theme Here
   theme: {

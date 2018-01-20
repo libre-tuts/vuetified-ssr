@@ -1,10 +1,8 @@
 <template>
   <v-app 
     v-cloak 
-    id="inspire"
   >
-    <app-sidebar/>
-    <app-nav-bar/>
+    <home-nav-bar/>
     <v-content
       transition="slide-x-transition" 
       fluid
@@ -18,15 +16,13 @@
 </template>
 
 <script>
-import AppFooter from '../partials/AppFooter'
-import AppNavBar from '../partials/AppNavBar'
-import AppSidebar from '../partials/AppSidebar'
+import AppFooter from '../partials/AppFooter.vue'
+import HomeNavBar from '../partials/HomeNavBar.vue'
 
 export default {
   components: {
     AppFooter,
-    AppNavBar,
-    AppSidebar
+    HomeNavBar
   }
 }
 </script>

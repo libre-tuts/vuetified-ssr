@@ -16,6 +16,13 @@ const polyfills = [
 module.exports = {
   // mode: 'spa',
   srcDir: __dirname,
+  env: {
+    apiUrl: process.env.APP_URL || 'http://api.laravel-nuxt.test',
+    appName: process.env.APP_NAME || 'Laravel-Nuxt',
+    appLocale: process.env.APP_LOCALE || 'en',
+    githubAuth: !!process.env.GITHUB_CLIENT_ID
+  },
+
   head: {
     title: process.env.APP_NAME,
     titleTemplate: '%s - ' + process.env.APP_NAME,
@@ -26,7 +33,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ],
     script: [
       { src: `https://cdn.polyfill.io/v2/polyfill.min.js?features=${polyfills.join(',')}` }
