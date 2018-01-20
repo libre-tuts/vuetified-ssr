@@ -10,7 +10,7 @@
           <v-icon>arrow_back</v-icon>
         </v-btn>
         <v-spacer/>
-        <v-toolbar-title class="text-xs-center white--text">{{ $t('login') }}</v-toolbar-title>
+        <v-toolbar-title class="text-xs-center white--text">{{ toolbarTitle }}</v-toolbar-title>
         <v-spacer/>
         <v-toolbar-items>
           <!-- If There is no User Account Login Yet Redirect to Authentication Page -->
@@ -181,6 +181,9 @@ export default {
   computed: {
     icon () {
       return this.password_visible ? 'visibility' : 'visibility_off'
+    },
+    toolbarTitle () {
+      return this.$t('login')
     },
     ...mapState({
       isAuthenticated: 'token'
