@@ -1,13 +1,7 @@
-### Version 1.0.2
-- added vuetify
-- Bumped version to 1.1.0
-- Bumped version to 1.1.0
-- change me log added
-- added language
-- Bumped version to 1.0.1
-- edited change log
+# Change Log
 
-### Version 1.0.2
+## Version 1.0.2
+
 - working login page
 - added error page template
 - added dashboard layout
@@ -17,7 +11,8 @@
 - working register page
 - fix loading , and disable, rules for password confirmation
 
-### Version 1.0.1
+## Version 1.0.1
+
 - added vuetify ala carte
 - added layouts (home,default,simple)
 - added partials (AppFooter, AppNavBar, AppSideBar, HomeNavBar)
@@ -28,6 +23,7 @@
 - added bus Mixins
 - added vscode settings
 
-### Version 1.0.0
+## Version 1.0.0
+
 - Installed Laravel Nuxt
 - Remove Uncessary Bootstrap Files
