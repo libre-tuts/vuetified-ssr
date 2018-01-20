@@ -10,7 +10,7 @@
           <v-icon>arrow_back</v-icon>
         </v-btn>
         <v-spacer/>
-        <v-toolbar-title class="text-xs-center white--text">{{ registerTitle }}</v-toolbar-title>
+        <v-toolbar-title class="text-xs-center white--text">{{ toolbarTitle }}</v-toolbar-title>
         <v-spacer/>
         <v-toolbar-items>
           <!-- If There is no User Account Login Yet Redirect to Authentication Page -->
@@ -206,7 +206,7 @@ export default {
 
   }),
   computed: {
-    registerTitle () {
+    toolbarTitle () {
       return this.$t('register')
     },
     ...mapState({
