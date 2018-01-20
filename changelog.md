@@ -1,9 +1,9 @@
-### Version 1.0.1
-- added vuetify
-- Bumped version to 1.1.0
-- Bumped version to 1.1.0
-- change me log added
-- added language
+### Version 1.0.2
+- working login page
+- added error page template
+- added dashboard layout
+- added home layout
+- added translation 
 
 ### Version 1.0.1
 - added vuetify ala carte
