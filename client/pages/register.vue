@@ -1,6 +1,6 @@
 <template>
     <v-card :flat="true">
-      <v-toolbar class="primary">
+      <v-toolbar class="accent">
         <v-btn 
           flat 
           icon 
