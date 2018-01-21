@@ -19,7 +19,7 @@
             color="white" 
             @click.native="goHome()"
           >
-            <v-icon>fa-home</v-icon>
+            <v-icon>home</v-icon>
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>

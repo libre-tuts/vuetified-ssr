@@ -58,11 +58,12 @@
       v-if="isAuthenticated"
       flat 
       color="white"
-      to="/logout"
+      @click.prevent="logoutUser()"
     >
       <span :class="[textClass]">{{ logout }}</span>
       <fa icon="sign-out-alt" pull="right" size="lg" :class="[iconClass]"/>
     </v-btn>
+    
     <locale-dropdown text-color="white--text" :icon-color="[iconClass]"/>
   </v-toolbar>
 </template>
@@ -107,6 +108,14 @@ export default {
     },
     support () {
       return this.$t('support')
+    }
+  },
+  methods: {
+    async logoutUser () {
+      // Log out the user.
+      await this.$store.dispatch('auth/logout')
+      // Redirect to login.
+      this.$router.push({ name: 'login' })
     }
   }
 }

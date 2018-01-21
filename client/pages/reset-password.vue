@@ -22,7 +22,7 @@
               right
               color="white"
             >
-              fa-home
+              home
             </v-icon>
           </v-btn>
         </v-toolbar-items>
