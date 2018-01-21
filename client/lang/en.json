@@ -32,5 +32,16 @@
   "password_updated": "Your password has been updated!",
   "new_password": "New Password",
   "login_with": "Login with",
-  "register_with": "Register with"
+  "register_with": "Register with",
+  "already_have_an_account": "Already Have An Account?",
+  "go": "Go",
+  "no_account_yet": "No Account Yet?",
+  "email_must_be_valid": "Email Must Be Valid?",
+  "password_is_required": "Password is Required",
+  "email_is_required": "Email is Required",
+  "password_min_6": "Password Must be At Least 6 Characters",
+  "at_least_6": "At Least 6 Characters",
+  "clear": "Clear",
+  "password_confirmation_rules": "Password Confirmation Does Not Match",
+  "name_is_required": "Name is Required"
 }

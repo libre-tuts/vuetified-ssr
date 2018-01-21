@@ -40,10 +40,10 @@
                 <v-text-field
                   class="primary--text"
                   name="email"
-                  label="Type Your Account Email"
+                  :label="$t('email')"
                   v-model="form.email"
                   :class="{ 'is-invalid': form.errors.has('email') }"
-                  :rules="emailRules"
+                  :rules="emailRules()"
                   prepend-icon="email"
                   counter="255"
                   required
@@ -65,13 +65,13 @@
                 <v-text-field
                   class="primary--text"
                   name="password"
-                  label="Enter your password"
-                  hint="At least 6 characters"
+                  :label="$t('password')"
+                  :hint="$t('at_least_6')"
                   v-model="form.password"
                   :append-icon="icon"
                   :append-icon-cb="() => (password_visible = !password_visible)"
                   :type="!password_visible ? 'password' : 'text'"
-                  :rules="passwordRules"
+                  :rules="passwordRules()"
                   :class="{ 'is-invalid': form.errors.has('password') }"
                   counter="255"
                   prepend-icon="lock"
@@ -98,7 +98,7 @@
                 type="submit" 
                 :color="indicator"
               >
-                Sign In 
+                {{ $t('login') }}
                 <v-icon right>keyboard_tab</v-icon>
               </v-btn>
               <v-btn 
@@ -107,7 +107,7 @@
                 color="accent"
                 @click.native="clear"
               >
-                Clear
+                {{ $t('clear') }}
                 <v-icon right>undo</v-icon>
               </v-btn>
             </v-flex>
@@ -128,7 +128,7 @@
                 block 
                 color="secondary"
               >
-                No Account Yet?
+                {{ $t('no_account_yet') }}
               </v-btn>
             </v-flex>
             <v-flex 
@@ -142,7 +142,7 @@
                 block 
                 color="error"
               >
-                Forgot Password?
+                {{ $t('forgot_password') }}
               </v-btn>
             </v-flex>
           </v-layout>
@@ -169,14 +169,18 @@ export default {
     }),
     password_visible: false,
     remember: false,
-    emailRules: [
-      (v) => !!v || 'E-mail is required',
-      (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-    ],
-    passwordRules: [
-      (v) => !!v || 'Password is Required',
-      (v) => v && v.length >= 6 || 'Password must not be less than 6 characters'
-    ]
+    emailRules () {
+      return [
+        (v) => !!v || this.$t('email_is_required'),
+        (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || this.$t('email_must_be_valid')
+      ]
+    },
+    passwordRules () {
+      return [
+        (v) => !!v || this.$t('password_is_required'),
+        (v) => v && v.length >= 6 || this.$t('password_min_6')
+      ]
+    }
   }),
   computed: {
     icon () {

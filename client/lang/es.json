@@ -33,5 +33,16 @@
   "password_updated": "¡Tu contraseña ha sido actualizada!",
   "new_password": "Nueva Contraseña",
   "login_with": "Iniciar Sesión con",
-  "register_with": "Registro con"
+  "register_with": "Registro con",
+  "already_have_an_account": "¿Ya tienes una cuenta?",
+  "go": "ir",
+  "no_account_yet": "No tienes cuenta aún?",
+  "email_must_be_valid": "El email debe ser válido",
+  "password_is_required": "Se requiere contraseña",
+  "email_is_required": "Correo electronico es requerido",
+  "password_min_6": "La contraseña no debe tener menos de 6 caracteres",
+  "at_least_6": "Al menos 6 caracteres",
+  "clear": "Claro",
+  "password_confirmation_rules": "La confirmación de contraseña no coincide",
+  "name_is_required": "Se requiere el nombre"
 }

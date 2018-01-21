@@ -40,10 +40,10 @@
                 <v-text-field
                   class="accent--text"
                   name="name"
-                  label="Full Name"
+                  :label="$t('name')"
                   v-model="form.name"
                   :class="{ 'is-invalid': form.errors.has('name') }"
-                  :rules="nameRules"
+                  :rules="nameRules()"
                   counter="255"
                   prepend-icon="account_circle"
                 />
@@ -64,10 +64,10 @@
                 <v-text-field
                   class="accent--text"
                   name="email"
-                  label="Email"
+                  :label="$t('email')"
                   v-model="form.email"
                   :class="{ 'is-invalid': form.errors.has('email') }"
-                  :rules="emailRules"
+                  :rules="emailRules()"
                   prepend-icon="email"
                   counter="255"
                 />
@@ -88,14 +88,14 @@
                 <v-text-field
                   class="accent--text"
                   name="password"
-                  label="Password"
+                  :label="$t('password')"
                   v-model="form.password"
                   :append-icon="passwordIcon"
                   :append-icon-cb="() => (password_visible = !password_visible)"
                   :type="!password_visible ? 'password' : 'text'"
                   prepend-icon="lock"
                   :class="{ 'is-invalid': form.errors.has('password') }"
-                  :rules="passwordRules"
+                  :rules="passwordRules()"
                   counter="255"
                 />
                 <has-error class="error--text pl-5" :form="form" field="password"></has-error>
@@ -115,14 +115,14 @@
                 <v-text-field
                   class="accent--text"
                   name="password_confirmation"
-                  label="Password Confirmation"
+                  :label="$t('confirm_password')"
                   v-model="form.password_confirmation"
                   :append-icon="passwordConfirmationIcon"
                   :append-icon-cb="() => (password_confirmation_visible = !password_confirmation_visible)"
                   :type="!password_confirmation_visible ? 'password' : 'text'"
                   prepend-icon="beenhere"
                   :class="{ 'is-invalid': form.errors.has('password_confirmation') }"
-                  :rules="[() => form.password_confirmation === form.password || 'Password Confirmation Does Not Match']"
+                  :rules="passwordConfirmationRules()"
                   counter="255"
                 />
                 <has-error class="error--text pl-5" :form="form" field="password_confirmation"></has-error>
@@ -145,7 +145,7 @@
                 block 
                 :color="indicator"
               >
-                Register
+                {{ $t('register') }}
               </v-btn>
               <v-btn 
                 block 
@@ -153,7 +153,7 @@
                 color="accent"
                 @click.native="clear"
               >
-                Clear
+                {{ $t('clear') }}
                 <v-icon right>undo</v-icon>
               </v-btn>
               <v-btn 
@@ -163,7 +163,7 @@
                 class="white--text" 
                 color="teal lighten-2"
               >
-                Already Have An Account? Go Login
+                {{ $t('already_have_an_account') }} {{ $t('go') }} {{ $t('login') }}
               </v-btn>
             </v-flex>
           </v-form>
@@ -192,17 +192,28 @@ export default {
     }),
     password_visible: false,
     password_confirmation_visible: false,
-    nameRules: [
-      (v) => !!v || 'Name is Required'
-    ],
-    emailRules: [
-      (v) => !!v || 'E-mail is required',
-      (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-    ],
-    passwordRules: [
-      (v) => !!v || 'Password is Required',
-      (v) => v && v.length >= 6 || 'Password must not be less than 6 characters'
-    ]
+    nameRules () {
+      return [
+        (v) => !!v || this.$t('name_is_required')
+      ]
+    },
+    emailRules () {
+      return [
+        (v) => !!v || this.$t('email_is_required'),
+        (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || this.$t('email_must_be_valid')
+      ]
+    },
+    passwordRules () {
+      return [
+        (v) => !!v || this.$t('password_is_required'),
+        (v) => v && v.length >= 6 || this.$t('password_min_6')
+      ]
+    },
+    passwordConfirmationRules () {
+      return [
+        () => this.form.password_confirmation === this.form.password || this.$t('password_confirmation_rules')
+      ]
+    }
 
   }),
   computed: {
