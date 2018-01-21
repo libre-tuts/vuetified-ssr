@@ -211,7 +211,7 @@ export default {
   methods: {
     resetPassword () {
       const self = this
-      self.$nextTick(() => self.$router.push({ name: 'forgotpassword' }))
+      self.$nextTick(() => self.$router.push({ name: 'forgot-password' }))
     },
     goHome () {
       const self = this

@@ -10,6 +10,8 @@
 - added env LOADING_COLOR for loading
 - working register page
 - fix loading , and disable, rules for password confirmation
+- added validation lang in login and register form
+- added forgot-password and reset password page
 
 ## Version 1.0.1
 
