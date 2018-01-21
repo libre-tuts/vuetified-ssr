@@ -12,6 +12,7 @@
 - fix loading , and disable, rules for password confirmation
 - added validation lang in login and register form
 - added forgot-password and reset password page
+- added validation before submit on forgot-password and reset-password
 
 ## Version 1.0.1
 

@@ -217,11 +217,17 @@ export default {
       return self.$nextTick(() => self.$router.go(-1))
     },
     async resetPassword () {
-      const { data } = await this.form.post('/password/reset')
+      if (this.$refs.form.validate()) {
+        this.form.busy = true
 
-      this.status = data.status
+        const { data } = await this.form.post('/password/reset')
 
-      this.form.reset()
+        this.status = data.status
+
+        this.form.reset()
+
+        this.form.busy = false
+      }
     }
 
   }
