@@ -13,6 +13,7 @@
 - added validation lang in login and register form
 - added forgot-password and reset password page
 - added validation before submit on forgot-password and reset-password
+- fix missing icons , added logout method on homenavbar
 
 ## Version 1.0.1
 
