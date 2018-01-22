@@ -10,6 +10,7 @@
 - add email for contact us
 - added env var for SITE_ used in contact us page
 - added language for support page
+- create readme.md
 
 ## Version 1.0.2
 
