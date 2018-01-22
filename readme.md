@@ -1,5 +1,7 @@
 # Vuetified SSR
 
+![vuetified-nuxt](https://user-images.githubusercontent.com/28816690/35202030-e7e9ff04-ff5a-11e7-8a8f-5e5d3c667598.png)
+
 ## Intro
 
 This is a Laravel Starter App With Nuxt for Server Side Rendering and  Vuetify For Beautiful UI.
