@@ -66,7 +66,10 @@ module.exports = {
     '~/modules/spa',
     [
       'nuxt-env', {
-        keys: ['API_URL', 'APP_NAME', 'APP_URL', 'APP_LOCALE', 'APP_TRADEMARK']
+        keys: [
+          'API_URL', 'APP_NAME', 'APP_URL', 'APP_LOCALE', 'APP_TRADEMARK',
+          'SITE_ADDRESS', 'SITE_CITY', 'SITE_STATE', 'SITE_CONTACT_NO', 'SITE_COUNTRY', 'SITE_EMAIL'
+        ]
       }
     ]
   ],

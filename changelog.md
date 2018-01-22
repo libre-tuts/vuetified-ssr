@@ -1,5 +1,16 @@
 # Change Log
 
+## Version 1.0.3
+
+- fix client/modules/spa for spa mode
+- fix reset-password link
+- remove nav button on toolbar in reset-password.vue
+- added clear button on reset-password
+- added support page
+- add email for contact us
+- added env var for SITE_ used in contact us page
+- added language for support page
+
 ## Version 1.0.2
 
 - working login page
