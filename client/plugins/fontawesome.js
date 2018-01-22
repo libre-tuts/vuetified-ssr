@@ -2,15 +2,16 @@ import Vue from 'vue'
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
-// import { } from '@fortawesome/fontawesome-free-regular/shakable.js'
+//! https://fontawesome.com/how-to-use/use-with-node-js#tree-shaking
+//! available alias = fs fab far fal
+// import { } from '@fortawesome/fontawesome-free-regular'
 
 import {
   faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
-} from '@fortawesome/fontawesome-free-solid/shakable.js'
-
+} from '@fortawesome/fontawesome-free-solid'
 // import {
 //   faGithub
-// } from '@fortawesome/fontawesome-free-brands/shakable.js'
+// } from '@fortawesome/fontawesome-free-brands'
 
 fontawesome.library.add(
   faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt

@@ -14,7 +14,7 @@ const polyfills = [
 ]
 
 module.exports = {
-  // mode: 'spa',
+  // mode: 'spa', //! UNCOMMENT FOR SPA MODE ONLY
   srcDir: __dirname,
   env: {
     apiUrl: process.env.APP_URL || 'http://api.laravel-nuxt.test',
@@ -33,7 +33,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.4/css/all.css' }
     ],
     script: [
       { src: `https://cdn.polyfill.io/v2/polyfill.min.js?features=${polyfills.join(',')}` }
@@ -58,7 +59,7 @@ module.exports = {
     '~/plugins/fontawesome',
     '~/plugins/vform',
     '~/plugins/vuetify'
-    // '~plugins/nuxt-client-init',
+    // '~plugins/nuxt-client-init', //! UNCOMMENT FOR SPA MODE ONLY
   ],
 
   modules: [
@@ -85,7 +86,7 @@ module.exports = {
         }]
       ]
     },
-    //* * This Will Export The Script in A Vendor.js */
+    //! This Will Export The Script in A Vendor.js */
     vendor: [
       '~/plugins/vuetify.js'
     ],
@@ -103,12 +104,18 @@ module.exports = {
         })
       }
       if (isServer) {
+        //! Externalize app dependencies. This makes the server build much faster
+        //! and generates a smaller bundle file. -> /\.css$/
         config.externals = [
           nodeExternals({
+            //! this will be included in the bundle
+            //! needed since we use ala carte in vuetify
             whitelist: [/^vuetify/]
           })
         ]
       }
+      //! add All Your webpack Aliases here
+      config.resolve.alias['@fortawesome/fontawesome-free-solid$'] = '@fortawesome/fontawesome-free-solid/shakable.es.js'
     },
     filenames: {
       css: 'common.[contenthash].css',
