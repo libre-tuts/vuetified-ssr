@@ -37,12 +37,19 @@
   "already_have_an_account": "已经有一个帐户？",
   "go": "走",
   "no_account_yet": "还没有帐户？",
-  "email_must_be_valid": "电子邮件必须有效",
+  "email_must_be_valid": "电子邮件无效",
   "password_is_required": "密码是必需的",
   "email_is_required": "电邮是必需的",
   "password_rules": "密码不能少于6个字符",
   "at_least_6": "至少6个字符",
   "clear": "明确",
   "password_confirmation_rules": "密码确认不符",
-  "name_is_required": "名称是必需的"
+  "name_is_required": "名称是必需的",
+  "contact_us": "联系我们",
+  "message": "信息",
+  "subject": "学科",
+  "send": "发送",
+  "contact_details": "联系方式",
+  "subject_is_required": "主题是必需的",
+  "message_is_required": "信息是必需的"
 }

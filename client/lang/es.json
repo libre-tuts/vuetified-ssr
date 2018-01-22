@@ -37,12 +37,19 @@
   "already_have_an_account": "¿Ya tienes una cuenta?",
   "go": "ir",
   "no_account_yet": "No tienes cuenta aún?",
-  "email_must_be_valid": "El email debe ser válido",
+  "email_must_be_valid": "El correo electrónico es invalido",
   "password_is_required": "Se requiere contraseña",
   "email_is_required": "Correo electronico es requerido",
   "password_min_6": "La contraseña no debe tener menos de 6 caracteres",
   "at_least_6": "Al menos 6 caracteres",
   "clear": "Claro",
   "password_confirmation_rules": "La confirmación de contraseña no coincide",
-  "name_is_required": "Se requiere el nombre"
+  "name_is_required": "Se requiere el nombre",
+  "contact_us": "Contáctenos",
+  "message": "Mensaje",
+  "subject": "Tema",
+  "send": "Enviar",
+  "contact_details": "Detalles de contacto",
+  "subject_is_required": "El sujeto es requerido",
+  "message_is_required": "Mensaje es requerido"
 }

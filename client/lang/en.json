@@ -36,12 +36,19 @@
   "already_have_an_account": "Already Have An Account?",
   "go": "Go",
   "no_account_yet": "No Account Yet?",
-  "email_must_be_valid": "Email Must Be Valid?",
+  "email_must_be_valid": "Email is Invalid",
   "password_is_required": "Password is Required",
   "email_is_required": "Email is Required",
   "password_min_6": "Password Must be At Least 6 Characters",
   "at_least_6": "At Least 6 Characters",
   "clear": "Clear",
   "password_confirmation_rules": "Password Confirmation Does Not Match",
-  "name_is_required": "Name is Required"
+  "name_is_required": "Name is Required",
+  "contact_us": "Contact Us",
+  "message": "Message",
+  "subject": "Subject",
+  "send": "Send",
+  "contact_details": "Contact Details",
+  "subject_is_required": "Subject is Required",
+  "message_is_required": "Message is Required"
 }
