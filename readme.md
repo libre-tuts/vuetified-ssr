@@ -1,4 +1,4 @@
-# Laravel Nuxt Vuetified
+# Vuetified SSR
 
 ## Intro
 
@@ -21,11 +21,23 @@ Where We Can Use Laravel as API and Nuxt For Front End SSR. Well the Good thing 
 
 ## Why I Created This
 
-I Need SEO , and I Love laravel, Vue Js and Vuetify... Sincerely I hate Boostrap Style ...
+Sincerely I hate Boostrap Styling , 
+
+And Instead of JWT for Authentication I wanna Use Laravel Passport, 
+
+So In the Future if i Need To Use This For Desktop or Native App its Easy...
+
+And I Want Real Time Ready Starter App Boilerplate
+
+Which [Laravel SSR](https://github.com/exodusanto/laravel-ssr) is Lacking/Using... 
+
+And I Love laravel, Vue Js and Vuetify... and Integrate New Technology in My Stacks
 
 This Starter App Comes With Complete Auth Scafold Using Vuetify For the UI... 
 
 A Simple Dashboard... And Profile Page To get You Started.
+
+Hope You Enjoy It :)
 
 ## Requirements
 
