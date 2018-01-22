@@ -8,6 +8,7 @@ const Login = () => import('~/pages/login').then(m => m.default || m)
 const Register = () => import('~/pages/register').then(m => m.default || m)
 const ForgotPassword = () => import('~/pages/forgot-password').then(m => m.default || m)
 const ResetPassword = () => import('~/pages/reset-password').then(m => m.default || m)
+const ContactUs = () => import('~/pages/contact-us').then(m => m.default || m)
 
 // const Settings = () => import('~/pages/settings/index').then(m => m.default || m)
 // const SettingsProfile = () => import('~/pages/settings/profile').then(m => m.default || m)
@@ -18,7 +19,8 @@ const routes = [
   { path: '/login', name: 'login', component: Login },
   { path: '/register', name: 'register', component: Register },
   { path: '/forgot-password', name: 'forgot-password', component: ForgotPassword },
-  { path: '/reset-password/:token', name: 'password-reset', component: ResetPassword }
+  { path: '/reset-password/:token', name: 'password-reset', component: ResetPassword },
+  { path: '/contact-us', name: 'contact-us', component: ContactUs }
 
   // { path: '/settings', component: Settings, children: [
   //   { path: '', redirect: { name: 'settings.profile' }},

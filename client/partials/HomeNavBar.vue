@@ -49,7 +49,7 @@
     <v-btn 
       flat
       color="white"
-      to="/support"
+      to="/contact-us"
     >
       <span :class="[textClass]">{{ support }}</span>
       <fa icon="life-ring" pull="right" size="lg" :class="[iconClass]"/>
