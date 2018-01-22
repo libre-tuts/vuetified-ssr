@@ -2,30 +2,11 @@
 
     <v-card :flat="true">
       <v-toolbar class="accent">
-        <v-btn 
-          icon 
-          @click.native="redirectBack()"
-        >
-          <v-icon color="white">arrow_back</v-icon>
-        </v-btn>
+        
         <v-spacer/>
         <v-toolbar-title class="text-xs-center white--text">{{ toolbarTitle }}</v-toolbar-title>
         <v-spacer/>
-        <v-toolbar-items>
-          <!-- If There is no User Account Login Yet Redirect to Authentication Page -->
-          <v-btn 
-            class="white--text" 
-            flat 
-            @click.native="goHome()"
-          >
-            <v-icon 
-              right
-              color="white"
-            >
-              home
-            </v-icon>
-          </v-btn>
-        </v-toolbar-items>
+
       </v-toolbar>
       <v-card-text style="padding-top:150px;">
         <v-container fluid>
@@ -127,6 +108,15 @@
               >
                 {{ $t('reset_password') }}
               </v-btn>
+              <v-btn 
+                block 
+                v-if="!valid"
+                color="accent"
+                @click.native="clear"
+              >
+                {{ $t('clear') }}
+                <v-icon right>undo</v-icon>
+              </v-btn>
             </v-flex>
           </v-form>
         </v-container>
@@ -208,14 +198,6 @@ export default {
     }
   },
   methods: {
-    goHome () {
-      const self = this
-      self.$nextTick(() => self.$router.push({ name: 'home' }))
-    },
-    redirectBack () {
-      const self = this
-      return self.$nextTick(() => self.$router.go(-1))
-    },
     async resetPassword () {
       if (this.$refs.form.validate()) {
         this.form.busy = true
@@ -228,6 +210,10 @@ export default {
 
         this.form.busy = false
       }
+    },
+    clear () {
+      this.form.password = ''
+      this.form.password_confirmation = ''
     }
 
   }
