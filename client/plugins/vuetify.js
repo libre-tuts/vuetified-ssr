@@ -1,62 +1,39 @@
 import Vue from 'vue'
 
-//! Import Only Components of Vuetify You Needed
+//! Based Components Needed
+//! Just Import The vuetify components in the component if needed
+//! To Get A Lower Bundle Size
 import {
-  Vuetify,
-  VApp,
-  VNavigationDrawer,
-  VFooter,
-  VList,
-  VBtn,
-  VIcon,
-  VGrid,
-  VToolbar,
   transitions,
+  VApp,
+  VBtn,
   VCard,
-  VAvatar,
-  VCarousel,
-  VChip,
-  VTextField,
+  VGrid,
+  VIcon,
+  VToolbar,
   VProgressCircular,
-  VSubheader,
-  VDataTable,
-  VCheckbox,
-  VSelect,
-  VTabs,
-  VAlert,
-  VBreadcrumbs,
-  VParallax,
-  VMenu,
-  VForm
+  VList,
+  Vuetify
 } from 'vuetify'
+
+//! Available Directives : ClickOutside, Ripple, Resize, Scroll, Touch
+import { Ripple } from 'vuetify/es5/directives'
 
 Vue.use(Vuetify, {
   components: {
-    VApp,
-    VNavigationDrawer,
-    VFooter,
-    VList,
-    VBtn,
-    VIcon,
-    VGrid,
-    VToolbar,
     transitions,
+    VApp,
+    VBtn,
     VCard,
-    VAvatar,
-    VCarousel,
-    VChip,
-    VTextField,
-    VProgressCircular,
-    VSubheader,
-    VDataTable,
-    VCheckbox,
-    VSelect,
-    VTabs,
-    VAlert,
-    VBreadcrumbs,
-    VParallax,
-    VMenu,
-    VForm
+    VGrid,
+    VIcon,
+    VToolbar,
+    VList,
+    Vuetify,
+    VProgressCircular
+  },
+  directives: {
+    Ripple
   },
   //! Define Your Theme Here
   theme: {
