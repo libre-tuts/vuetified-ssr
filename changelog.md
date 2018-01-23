@@ -2,7 +2,14 @@
 
 ## Updates
 
+### Version 1.1.2
+
+- added eslint configuration and fix code, added base64 roboto fonts and remove external links
+- remove boostrap auth pages
+- eslint fix to lf and added ignore eslint comment to other node related globals
+
 ### Version 1.1.1
+
 - change icons to fontawesome 5, catch error on reset-password page and redirect to homepage
 - change fontawesome 5 support page , and change change icon on reset page
 - implement vue font-awesome component in all pages
