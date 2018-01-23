@@ -43,7 +43,7 @@
                   :class="{ 'is-invalid': form.errors.has('name') }"
                   :rules="nameRules()"
                   counter="255"
-                  prepend-icon="account_circle"
+                  prepend-icon="fas fa-user-circle"
                 />
                 <has-error class="error--text pl-5" :form="form" field="name"></has-error>
               </v-flex>
@@ -66,7 +66,7 @@
                   v-model="form.email"
                   :class="{ 'is-invalid': form.errors.has('email') }"
                   :rules="emailRules()"
-                  prepend-icon="email"
+                  prepend-icon="fas fa-envelope"
                   counter="255"
                 />
                 <has-error class="error--text pl-5" :form="form" field="email"></has-error>
@@ -91,7 +91,7 @@
                   :append-icon="passwordIcon"
                   :append-icon-cb="() => (password_visible = !password_visible)"
                   :type="!password_visible ? 'password' : 'text'"
-                  prepend-icon="lock"
+                  prepend-icon="fas fa-lock"
                   :class="{ 'is-invalid': form.errors.has('password') }"
                   :rules="passwordRules()"
                   counter="255"
@@ -118,7 +118,7 @@
                   :append-icon="passwordConfirmationIcon"
                   :append-icon-cb="() => (password_confirmation_visible = !password_confirmation_visible)"
                   :type="!password_confirmation_visible ? 'password' : 'text'"
-                  prepend-icon="beenhere"
+                  prepend-icon="fas fa-check-circle"
                   :class="{ 'is-invalid': form.errors.has('password_confirmation') }"
                   :rules="passwordConfirmationRules()"
                   counter="255"
@@ -144,6 +144,7 @@
                 :color="indicator"
               >
                 {{ $t('register') }}
+                <v-icon right :class="iconClass">fas fa-id-card</v-icon>
               </v-btn>
               <v-btn 
                 block 
@@ -152,7 +153,7 @@
                 @click.native="clear"
               >
                 {{ $t('clear') }}
-                <v-icon right>undo</v-icon>
+                <v-icon right>fas fa-undo</v-icon>
               </v-btn>
               <v-btn 
                 @click.native="goToLogin()" 
@@ -234,10 +235,10 @@ export default {
       isAuthenticated: 'token'
     }),
     passwordIcon () {
-      return this.password_visible ? 'visibility' : 'visibility_off'
+      return this.password_visible ? 'fas fa-eye' : 'fas fa-eye-slash'
     },
     passwordConfirmationIcon () {
-      return this.password_confirmation_visible ? 'visibility' : 'visibility_off'
+      return this.password_confirmation_visible ? 'fas fa-eye' : 'fas fa-eye-slash'
     },
     indicator () {
       if (this.form.busy) {

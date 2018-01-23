@@ -43,7 +43,7 @@
                   v-model="form.email"
                   :class="{ 'is-invalid': form.errors.has('email') }"
                   :rules="emailRules()"
-                  prepend-icon="email"
+                  prepend-icon="fas fa-envelope"
                   counter="255"
                   required
                 />
@@ -73,7 +73,7 @@
                   :rules="passwordRules()"
                   :class="{ 'is-invalid': form.errors.has('password') }"
                   counter="255"
-                  prepend-icon="lock"
+                  prepend-icon="fas fa-lock"
                   required
                 />
                 <has-error class="error--text pl-5" :form="form" field="password"></has-error>
@@ -98,7 +98,7 @@
                 :color="indicator"
               >
                 {{ $t('login') }}
-                <v-icon right>keyboard_tab</v-icon>
+                <v-icon right>fas fa-sign-in-alt</v-icon>
               </v-btn>
               <v-btn 
                 block 
@@ -107,7 +107,7 @@
                 @click.native="clear"
               >
                 {{ $t('clear') }}
-                <v-icon right>undo</v-icon>
+                <v-icon right>fas fa-undo</v-icon>
               </v-btn>
             </v-flex>
           </v-form>
@@ -195,7 +195,7 @@ export default {
   }),
   computed: {
     icon () {
-      return this.password_visible ? 'visibility' : 'visibility_off'
+      return this.password_visible ? 'fas fa-eye' : 'fas fa-eye-slash'
     },
     toolbarTitle () {
       return this.$t('login')

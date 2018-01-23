@@ -4,7 +4,7 @@
       <v-toolbar class="accent">
         
         <v-spacer/>
-        <v-toolbar-title class="text-xs-center white--text">{{ toolbarTitle }}</v-toolbar-title>
+        <v-toolbar-title :class="[titleClass]">{{ toolbarTitle }}</v-toolbar-title>
         <v-spacer/>
 
       </v-toolbar>
@@ -26,7 +26,7 @@
                   class="primary--text"
                   name="email"
                   v-model="form.email"
-                  prepend-icon="email"
+                  prepend-icon="fas fa-envelope"
                   counter="255"
                   :label="$t('email')"
                   :class="{ 'is-invalid': form.errors.has('email') }"
@@ -34,6 +34,7 @@
                   readonly
                   disabled
                 />
+                <has-error class="error--text pl-5" :form="form" field="email"></has-error>
               </v-flex>
             </v-layout>
             <v-layout row>
@@ -54,12 +55,13 @@
                   :append-icon="passwordIcon"
                   :append-icon-cb="() => (password_visible = !password_visible)"
                   :type="!password_visible ? 'password' : 'text'"
-                  prepend-icon="lock"
+                  prepend-icon="fas fa-lock"
                   counter="255"
                   :label="$t('new_password')"
                   :class="{ 'is-invalid': form.errors.has('password') }"
                   :rules="passwordRules()"
                 />
+                <has-error class="error--text pl-5" :form="form" field="password"></has-error>
               </v-flex>
             </v-layout>
             <v-layout row>
@@ -81,12 +83,13 @@
                   :append-icon="passwordConfirmationIcon"
                   :append-icon-cb="() => (password_confirmation_visible = !password_confirmation_visible)"
                   :type="!password_confirmation_visible ? 'password' : 'text'"
-                  prepend-icon="beenhere"
+                  prepend-icon="fas fa-check-circle"
                   counter="255"
                   :label="$t('confirm_password')"
                   :class="{ 'is-invalid': form.errors.has('password_confirmation') }"
                   :rules="passwordConfirmationRules()"
                 />
+                <has-error class="error--text pl-5" :form="form" field="password_confirmation"></has-error>
               </v-flex>
             </v-layout>
             <v-flex 
@@ -107,15 +110,7 @@
                 block
               >
                 {{ $t('reset_password') }}
-              </v-btn>
-              <v-btn 
-                block 
-                v-if="!valid"
-                color="accent"
-                @click.native="clear"
-              >
-                {{ $t('clear') }}
-                <v-icon right>undo</v-icon>
+                <v-icon small right :class="iconClass">fas fa-unlock-alt</v-icon>
               </v-btn>
             </v-flex>
           </v-form>
@@ -126,11 +121,16 @@
 </template>
 
 <script>
+import { VForm, VTextField } from 'vuetify'
 import { Form } from 'vform'
 import { createNamespacedHelpers } from 'vuex'
 const { mapGetters } = createNamespacedHelpers('auth')
 
 export default {
+  components: {
+    VForm,
+    VTextField
+  },
   head () {
     return { title: this.$t('reset_password') }
   },
@@ -161,6 +161,13 @@ export default {
         (v) => !!v || this.$t('email_is_required'),
         (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || this.$t('email_must_be_valid')
       ]
+    },
+    titleClass: {
+      'white--text': true,
+      'text-xs-center': true
+    },
+    iconClass: {
+      'info--text': true
     }
   }),
   computed: {
@@ -181,11 +188,12 @@ export default {
       }
     },
     passwordIcon () {
-      return this.password_visible ? 'visibility' : 'visibility_off'
+      return this.password_visible ? 'fas fa-eye' : 'fas fa-eye-slash'
     },
     passwordConfirmationIcon () {
-      return this.password_confirmation_visible ? 'visibility' : 'visibility_off'
+      return this.password_confirmation_visible ? 'fas fa-eye' : 'fas fa-eye-slash'
     }
+
   },
   mounted () {
     const self = this
@@ -199,23 +207,24 @@ export default {
   },
   methods: {
     async resetPassword () {
+      const self = this
       if (this.$refs.form.validate()) {
-        this.form.busy = true
+        self.form.busy = true
 
-        const { data } = await this.form.post('/password/reset')
+        try {
+          const { data } = await self.form.post('/password/reset')
 
-        this.status = data.status
+          self.status = data.status
 
-        this.form.reset()
+          self.form.reset()
 
-        this.form.busy = false
+          self.form.busy = false
+        } catch (error) {
+          console.log(error)
+          self.$nextTick(() => self.$router.push('/'))
+        }
       }
-    },
-    clear () {
-      this.form.password = ''
-      this.form.password_confirmation = ''
     }
-
   }
 }
 </script>

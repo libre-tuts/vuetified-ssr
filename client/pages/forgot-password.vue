@@ -41,7 +41,7 @@
                   :label="$t('email')"
                   :class="{ 'is-invalid': form.errors.has('email') }"
                   v-model="form.email"
-                  prepend-icon="email"
+                  prepend-icon="fas fa-envelope"
                   :rules="emailRules()"
                   counter="255"
                 />
@@ -65,6 +65,7 @@
                 block
               >
                 {{ $t('send_password_reset_link') }}
+                <v-icon right :class="iconClass">fas fa-link</v-icon>
               </v-btn>
             </v-flex>
           </v-form>
