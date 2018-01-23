@@ -9,7 +9,6 @@ import {
   VBtn,
   VCard,
   VGrid,
-  VIcon,
   VToolbar,
   VProgressCircular,
   VList,
