@@ -2,7 +2,7 @@
 <v-menu :nudge-width="100">
     <v-toolbar-title slot="activator">
         <span :class="[textColor]">{{ locale }}</span>
-        <fa icon="caret-down" :fixed-width="true"  :class="[iconColor]"/>
+        <v-icon small :class="[iconColor]">fas fa-caret-down</v-icon>
     </v-toolbar-title>
     <v-list>
         <v-list-tile v-for="(value, key) in locales" :key="key" @click="setLocale(key)">

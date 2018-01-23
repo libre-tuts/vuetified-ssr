@@ -33,7 +33,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.4/css/all.css' }
     ],
     script: [
@@ -56,7 +56,7 @@ module.exports = {
     // '~components/global',
     '~/plugins/i18n',
     '~/plugins/axios',
-    '~/plugins/fontawesome',
+    // '~/plugins/fontawesome',
     '~/plugins/vform',
     '~/plugins/vuetify'
     // '~plugins/nuxt-client-init', //! UNCOMMENT FOR SPA MODE ONLY
