@@ -1,3 +1,34 @@
+### Version 1.1.0
+- added vuetify
+- Bumped version to 1.1.0
+- Bumped version to 1.1.0
+- change me log added
+- added language
+- Bumped version to 1.0.1
+- edited change log
+- Bumped version to 1.0.2
+- update to v 1.0.2 with fixes and added pages
+- change primary to accent toolbar color for register
+- added toolbar Title
+- added toolbarTitle
+- added lang for validation in login and register form
+- added forgot-password and reset-password page
+- added validation before submit on forgot-password and reset-password
+- fix missing icons , added logout method on homenavbar
+- change log updated
+- fix client/modules/spa for spa mode
+- fix reset-password link
+- added language for support page
+- added env var for SITE_ used in contact us page
+- added support page
+- added working contact page
+- added readme.md
+- updated readme.md
+- updated readme.md (origin/master)
+- added comment on fontawesome and nuxt config, included fontawesome 5 css
+- fix missing dashboard key
+-  remove many of the vuetify components in global scope, only added required
+
 ### Version 1.0.1
 - added vuetify
 - Bumped version to 1.1.0
