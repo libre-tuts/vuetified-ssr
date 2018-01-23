@@ -1,17 +1,17 @@
 require('dotenv').config()
 const nodeExternals = require('webpack-node-externals')
 
-const polyfills = [
-  'Promise',
-  'Object.assign',
-  'Object.values',
-  'Array.prototype.find',
-  'Array.prototype.findIndex',
-  'Array.prototype.includes',
-  'String.prototype.includes',
-  'String.prototype.startsWith',
-  'String.prototype.endsWith'
-]
+// const polyfills = [
+//   'Promise',
+//   'Object.assign',
+//   'Object.values',
+//   'Array.prototype.find',
+//   'Array.prototype.findIndex',
+//   'Array.prototype.includes',
+//   'String.prototype.includes',
+//   'String.prototype.startsWith',
+//   'String.prototype.endsWith'
+// ]
 
 module.exports = {
   // mode: 'spa', //! UNCOMMENT FOR SPA MODE ONLY
@@ -32,12 +32,11 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Vuetified Nuxt' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' }
-    ],
-    script: [
-      { src: `https://cdn.polyfill.io/v2/polyfill.min.js?features=${polyfills.join(',')}` }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+    // script: [
+    //   { src: `https://cdn.polyfill.io/v2/polyfill.min.js?features=${polyfills.join(',')}` }
+    // ]
   },
 
   loading: { color: process.env.LOADING_COLOR || '#B9F6CA' },
@@ -47,6 +46,7 @@ module.exports = {
   },
 
   css: [
+    { src: 'roboto-base64', lang: 'css' },
     { src: '~assets/style/app.styl', lang: 'stylus' },
     { src: '~assets/sass/app.scss', lang: 'scss' }
   ],

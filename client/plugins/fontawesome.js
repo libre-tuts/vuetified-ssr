@@ -7,14 +7,14 @@ import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 // import { } from '@fortawesome/fontawesome-free-regular'
 
 import {
-  faCommentAlt, faMapMarker, faMap, faBuilding, faFlag, faPhone, faRecycle, faLink, faIdCard, faCheckCircle, faUserCircle, faHome, faArrowLeft, faUndo, faEye, faEyeSlash, faEnvelope, faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
+    faCommentAlt, faMapMarker, faMap, faBuilding, faFlag, faPhone, faRecycle, faLink, faIdCard, faCheckCircle, faUserCircle, faHome, faArrowLeft, faUndo, faEye, faEyeSlash, faEnvelope, faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
 } from '@fortawesome/fontawesome-free-solid'
 // import {
 //   faGithub
 // } from '@fortawesome/fontawesome-free-brands'
 
 fontawesome.library.add(
-  faCommentAlt, faMapMarker, faMap, faBuilding, faFlag, faPhone, faRecycle, faLink, faIdCard, faCheckCircle, faUserCircle, faHome, faArrowLeft, faUndo, faEye, faEyeSlash, faEnvelope, faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
+    faCommentAlt, faMapMarker, faMap, faBuilding, faFlag, faPhone, faRecycle, faLink, faIdCard, faCheckCircle, faUserCircle, faHome, faArrowLeft, faUndo, faEye, faEyeSlash, faEnvelope, faCaretDown, faUser, faLock, faSignOutAlt, faCog, faUserPlus, faSignInAlt, faLifeRing, faTachometerAlt
 )
 
 fontawesome.config.autoAddCss = false

@@ -60,24 +60,24 @@
 import LocaleDropdown from '../components/LocaleDropdown.vue'
 import Bus from '../mixins/bus'
 export default {
-  components: {
-    LocaleDropdown
-  },
-  data: () => ({
-    extension: false,
-    showLogo: false,
-    logo: '/img/logo.png',
-    showIcon: false,
-    title: ''
-  }),
-  mounted () {
-    this.title = this.$env.APP_NAME
-  },
-  methods: {
-    toggleDrawer () {
-      Bus.$emit('toggleDrawer')
+    components: {
+        LocaleDropdown
+    },
+    data: () => ({
+        extension: false,
+        showLogo: false,
+        logo: '/img/logo.png',
+        showIcon: false,
+        title: ''
+    }),
+    mounted () {
+        this.title = this.$env.APP_NAME
+    },
+    methods: {
+        toggleDrawer () {
+            Bus.$emit('toggleDrawer')
+        }
     }
-  }
 }
 </script>
 

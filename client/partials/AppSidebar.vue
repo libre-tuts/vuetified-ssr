@@ -6,7 +6,10 @@
     hide-overlay
     app
   >
-    <v-list dense class="blue-grey">
+    <v-list 
+      dense 
+      class="blue-grey"
+    >
       <!-- V-For Links From Menu -->
       <!-- Individual Link (Custom Additional) -->
       <v-link 
@@ -87,37 +90,37 @@ import Bus from '../mixins/bus'
 import VLink from '../components/VLink.vue'
 
 export default {
-  components: {
-    VLink
-  },
-  data: () => ({
-    drawer: false
-  }),
-  mounted () {
-    const self = this
-    switch (self.$vuetify.breakpoint.name) {
-      case 'xs':
-        self.drawer = false
-        break
-      case 'sm':
-        self.drawer = false
-        break
-      case 'md':
-        self.drawer = true
-        break
-      case 'lg':
-        self.drawer = true
-        break
-      case 'xl':
-        self.drawer = true
-        break
-      default:
-        break
+    components: {
+        VLink
+    },
+    data: () => ({
+        drawer: false
+    }),
+    mounted () {
+        const self = this
+        switch (self.$vuetify.breakpoint.name) {
+        case 'xs':
+            self.drawer = false
+            break
+        case 'sm':
+            self.drawer = false
+            break
+        case 'md':
+            self.drawer = true
+            break
+        case 'lg':
+            self.drawer = true
+            break
+        case 'xl':
+            self.drawer = true
+            break
+        default:
+            break
+        }
+        Bus.$on('toggleDrawer', function () {
+            self.drawer = !self.drawer
+        })
     }
-    Bus.$on('toggleDrawer', function () {
-      self.drawer = !self.drawer
-    })
-  }
 
 }
 </script>

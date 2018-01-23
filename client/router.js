@@ -15,42 +15,42 @@ const ContactUs = () => import('~/pages/contact-us').then(m => m.default || m)
 // const SettingsPassword = () => import('~/pages/settings/password').then(m => m.default || m)
 
 const routes = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/login', name: 'login', component: Login },
-  { path: '/register', name: 'register', component: Register },
-  { path: '/forgot-password', name: 'forgot-password', component: ForgotPassword },
-  { path: '/reset-password/:token', name: 'password-reset', component: ResetPassword },
-  { path: '/contact-us', name: 'contact-us', component: ContactUs }
+    { path: '/', name: 'home', component: Home },
+    { path: '/login', name: 'login', component: Login },
+    { path: '/register', name: 'register', component: Register },
+    { path: '/forgot-password', name: 'forgot-password', component: ForgotPassword },
+    { path: '/reset-password/:token', name: 'password-reset', component: ResetPassword },
+    { path: '/contact-us', name: 'contact-us', component: ContactUs }
 
-  // { path: '/settings', component: Settings, children: [
-  //   { path: '', redirect: { name: 'settings.profile' }},
-  //   { path: 'profile', name: 'settings.profile', component: SettingsProfile },
-  //   { path: 'password', name: 'settings.password', component: SettingsPassword }
-  // ] }
+    // { path: '/settings', component: Settings, children: [
+    //   { path: '', redirect: { name: 'settings.profile' }},
+    //   { path: 'profile', name: 'settings.profile', component: SettingsProfile },
+    //   { path: 'password', name: 'settings.password', component: SettingsPassword }
+    // ] }
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {
-  if (savedPosition) {
-    return savedPosition
-  }
+    if (savedPosition) {
+        return savedPosition
+    }
 
-  let position = {}
+    let position = {}
 
-  if (to.matched.length < 2) {
-    position = { x: 0, y: 0 }
-  } else if (to.matched.some(r => r.components.default.options.scrollToTop)) {
-    position = { x: 0, y: 0 }
-  } if (to.hash) {
-    position = { selector: to.hash }
-  }
+    if (to.matched.length < 2) {
+        position = { x: 0, y: 0 }
+    } else if (to.matched.some(r => r.components.default.options.scrollToTop)) {
+        position = { x: 0, y: 0 }
+    } if (to.hash) {
+        position = { selector: to.hash }
+    }
 
-  return position
+    return position
 }
 
 export function createRouter () {
-  return new Router({
-    routes,
-    scrollBehavior,
-    mode: 'history'
-  })
+    return new Router({
+        routes,
+        scrollBehavior,
+        mode: 'history'
+    })
 }

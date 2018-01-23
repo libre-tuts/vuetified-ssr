@@ -20,9 +20,9 @@ import AppFooter from '../partials/AppFooter.vue'
 import HomeNavBar from '../partials/HomeNavBar.vue'
 
 export default {
-  components: {
-    AppFooter,
-    HomeNavBar
-  }
+    components: {
+        AppFooter,
+        HomeNavBar
+    }
 }
 </script>

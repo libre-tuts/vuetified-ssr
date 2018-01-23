@@ -11,7 +11,7 @@
       ma-0
     >
       <transition name="slide-x-transition">
-             <nuxt/>
+        <nuxt/>
       </transition>
     </v-content>
     <app-footer/>
@@ -24,10 +24,10 @@ import AppNavBar from '../partials/AppNavBar'
 import AppSidebar from '../partials/AppSidebar'
 
 export default {
-  components: {
-    AppFooter,
-    AppNavBar,
-    AppSidebar
-  }
+    components: {
+        AppFooter,
+        AppNavBar,
+        AppSidebar
+    }
 }
 </script>

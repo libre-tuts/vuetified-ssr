@@ -17,12 +17,12 @@
 <script>
 import NuxtLogo from '../components/NuxtLogo.vue'
 export default {
-  components: {
-    NuxtLogo
-  },
-  layout: 'simple',
-  head () {
-    return { title: this.$t('go_home') }
-  }
+    components: {
+        NuxtLogo
+    },
+    layout: 'simple',
+    head () {
+        return { title: this.$t('go_home') }
+    }
 }
 </script>
