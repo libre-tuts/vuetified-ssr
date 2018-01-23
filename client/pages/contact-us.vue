@@ -97,7 +97,7 @@
                             block
                           >
                             {{ $t('send') }}
-                            <v-icon right>send</v-icon>
+                            <v-icon right>fas fa-comment-alt</v-icon>
                           </v-btn>
                         </v-form>
                       </v-flex>
@@ -127,22 +127,22 @@
                   >
                     <v-card-title class="headline accent--text">{{ $t('contact_details') }}</v-card-title>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="red">place</v-icon> {{ address }}
+                      <v-icon color="red">fas fa-map-marker</v-icon> {{ address }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="indigo">location_city</v-icon> {{ city }}
+                      <v-icon color="indigo">fas fa-building</v-icon> {{ city }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="info">map</v-icon> {{ state }}
+                      <v-icon color="info">fas fa-map</v-icon> {{ state }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="light-blue">language</v-icon> {{ country }}
+                      <v-icon color="light-blue">fas fa-flag</v-icon> {{ country }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="brown">phone</v-icon>{{ contact_no }}
+                      <v-icon color="brown">fas fa-phone</v-icon>{{ contact_no }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="yellow darken-2">mail</v-icon><span v-text="email"/>
+                      <v-icon color="yellow darken-2">fas fa-envelope</v-icon><span v-text="email"/>
                     </v-card-text>
                   </v-card>
                 </v-flex>

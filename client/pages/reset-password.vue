@@ -110,7 +110,7 @@
                 block
               >
                 {{ $t('reset_password') }}
-                <v-icon small right :class="iconClass">fas fa-unlock-alt</v-icon>
+                <v-icon small right :class="iconClass">fas fa-recycle</v-icon>
               </v-btn>
             </v-flex>
           </v-form>
