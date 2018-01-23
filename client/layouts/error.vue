@@ -11,7 +11,7 @@
         :color="iconColor"
         @click.native="redirectBack()"
       >
-        <v-icon >arrow_back</v-icon>
+        <fa size="2x" :class="[iconClass]" icon="arrow-left" />
       </v-btn>
       <v-spacer/>
       <v-toolbar-title v-if="error.statusCode === 404"  class="text-xs-center white--text">{{ pageTitle }}</v-toolbar-title>
@@ -24,12 +24,7 @@
           flat 
           @click.native="goHome()"
         >
-          <v-icon 
-            right 
-            :color="iconColor"
-          >
-            home
-          </v-icon>
+          <fa size="2x" :class="[iconClass]" icon="home" />
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -552,7 +547,9 @@
 export default {
   props: ['error'],
   data: () => ({
-    iconColor: 'white'
+    iconClass: {
+      'info--text': true
+    }
   }),
   head () {
     return { title: this.$t('page_not_found') }

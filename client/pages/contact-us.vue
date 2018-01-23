@@ -2,12 +2,12 @@
     <v-card :flat="true">
       <v-toolbar class="accent">
         <v-btn 
-          flat 
+          flat
           icon 
           color="info"
           @click.native="redirectBack()"
         >
-          <v-icon :class="[iconClass]">fas fa-arrow-left</v-icon>
+          <fa size="2x" :class="[iconClass]" icon="arrow-left" />
         </v-btn>
         <v-spacer/>
         <v-toolbar-title :class="[titleClass]">{{ toolbarTitle }}</v-toolbar-title>
@@ -18,7 +18,7 @@
           color="info"
           @click.native="goHome()"
         >
-          <v-icon :class="[iconClass]">fas fa-home</v-icon>
+          <fa size="2x" :class="[iconClass]" icon="home" />
         </v-btn>
       </v-toolbar>
       <v-card-text>
@@ -97,7 +97,7 @@
                             block
                           >
                             {{ $t('send') }}
-                            <v-icon right>fas fa-comment-alt</v-icon>
+                            <fa pull="right" size="2x" :class="{'info--text': valid, 'disabled': !valid}" icon="comment-alt" />
                           </v-btn>
                         </v-form>
                       </v-flex>
@@ -127,22 +127,22 @@
                   >
                     <v-card-title class="headline accent--text">{{ $t('contact_details') }}</v-card-title>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="red">fas fa-map-marker</v-icon> {{ address }}
+                      <fa pull="left" size="2x" class="red--text" icon="map-marker" /> {{ address }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="indigo">fas fa-building</v-icon> {{ city }}
+                      <fa pull="left" size="2x" class="brown--text" icon="building" /> {{ city }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="info">fas fa-map</v-icon> {{ state }}
+                      <fa pull="left" size="2x" class="indigo--text" icon="map" /> {{ state }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="light-blue">fas fa-flag</v-icon> {{ country }}
+                      <fa pull="left" size="2x" class="teal--text" icon="flag" /> {{ country }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="brown">fas fa-phone</v-icon>{{ contact_no }}
+                      <fa pull="left" size="2x" flip="horizontal" class="blue-grey--text" icon="phone" /> {{ contact_no }}
                     </v-card-text>
                     <v-card-text class="headline accent--text">
-                      <v-icon color="yellow darken-2">fas fa-envelope</v-icon><span v-text="email"/>
+                      <fa pull="left" size="2x" class="amber--text" icon="envelope" /> <p v-text="email"/>
                     </v-card-text>
                   </v-card>
                 </v-flex>

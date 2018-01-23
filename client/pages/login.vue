@@ -1,5 +1,5 @@
 <template>
-    <v-card :flat="true">
+    <v-card :flat="true" class="grey lighten-5">
       <v-toolbar class="accent">
         <v-btn 
           flat 
@@ -7,7 +7,7 @@
           color="info"
           @click.native="redirectBack()"
         >
-          <v-icon :class="[iconClass]">fas fa-arrow-left</v-icon>
+        <fa size="2x" :class="[iconClass]" icon="arrow-left" />
         </v-btn>
         <v-spacer/>
         <v-toolbar-title :class="[titleClass]">{{ toolbarTitle }}</v-toolbar-title>
@@ -19,7 +19,7 @@
           color="info"
           @click.native="goHome()"
         >
-          <v-icon :class="[iconClass]">fas fa-home</v-icon>
+        <fa size="2x" :class="[iconClass]" icon="home" />
         </v-btn>
       </v-toolbar>
       <v-card-text style="padding-top:150px;">
@@ -35,7 +35,12 @@
                 offset-lg4 
                 xl4 
                 offset-xl4
+                d-flex
               >
+              <v-flex xs1>
+                <fa size="2x" class="mt-4 amber--text" icon="envelope" />
+              </v-flex>
+              <v-flex xs11>
                 <v-text-field
                   class="primary--text"
                   name="email"
@@ -43,10 +48,9 @@
                   v-model="form.email"
                   :class="{ 'is-invalid': form.errors.has('email') }"
                   :rules="emailRules()"
-                  prepend-icon="fas fa-envelope"
-                  counter="255"
                   required
                 />
+              </v-flex>
                 <has-error class="error--text pl-5" :form="form" field="email"></has-error>
               </v-flex>
             </v-layout>
@@ -60,22 +64,28 @@
                 offset-lg4 
                 xl4 
                 offset-xl4
+                d-flex
               >
+              <v-flex xs1>
+                <fa size="2x" class="mt-4 blue-grey--text" icon="lock" />
+              </v-flex>
+              <v-flex xs10>
                 <v-text-field
                   class="primary--text"
                   name="password"
                   :label="$t('password')"
                   :hint="$t('at_least_6')"
                   v-model="form.password"
-                  :append-icon="icon"
-                  :append-icon-cb="() => (password_visible = !password_visible)"
                   :type="!password_visible ? 'password' : 'text'"
                   :rules="passwordRules()"
                   :class="{ 'is-invalid': form.errors.has('password') }"
-                  counter="255"
-                  prepend-icon="fas fa-lock"
                   required
                 />
+              </v-flex>
+              <v-flex xs1 text-xs-right>
+                <fa style="cursor:pointer;" size="2x" v-if="!password_visible" @click="password_visible = !password_visible" class="mt-4 red--text text--darken-4" icon="eye-slash" />
+                <fa style="cursor:pointer;" size="2x" v-else @click="password_visible = !password_visible" class="mt-4 blue--text text--lighten-2" icon="eye" />
+              </v-flex>
                 <has-error class="error--text pl-5" :form="form" field="password"></has-error>
               </v-flex>
             </v-layout>
@@ -98,7 +108,7 @@
                 :color="indicator"
               >
                 {{ $t('login') }}
-                <v-icon right>fas fa-sign-in-alt</v-icon>
+                <fa pull="right" size="2x"  :class="{'info--text': valid, 'disabled': !valid}" icon="sign-in-alt"/>
               </v-btn>
               <v-btn 
                 block 
@@ -107,7 +117,7 @@
                 @click.native="clear"
               >
                 {{ $t('clear') }}
-                <v-icon right>fas fa-undo</v-icon>
+                <fa pull="right" size="2x"  :class="{'info--text': true}" icon="undo"/>
               </v-btn>
             </v-flex>
           </v-form>

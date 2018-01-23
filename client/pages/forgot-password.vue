@@ -1,5 +1,5 @@
 <template>
-    <v-card :flat="true">
+    <v-card :flat="true" class="grey lighten-5">
       <v-toolbar class="accent">
         <v-btn 
           flat 
@@ -34,17 +34,22 @@
                 offset-lg4 
                 xl4 
                 offset-xl4
+                d-flex
               >
+              <v-flex xs1>
+                <fa size="2x" class="mt-4 amber--text" icon="envelope" />
+              </v-flex>
+              <v-flex xs11>
                 <v-text-field
                   class="primary--text"
                   name="email"
                   :label="$t('email')"
                   :class="{ 'is-invalid': form.errors.has('email') }"
                   v-model="form.email"
-                  prepend-icon="fas fa-envelope"
                   :rules="emailRules()"
-                  counter="255"
                 />
+              </v-flex>
+              <has-error class="error--text pl-5" :form="form" field="email"></has-error>
               </v-flex>
             </v-layout>
             <v-flex 
@@ -65,7 +70,7 @@
                 block
               >
                 {{ $t('send_password_reset_link') }}
-                <v-icon right :class="iconClass">fas fa-link</v-icon>
+                <fa pull="right" size="2x"  :class="[iconClass]" icon="link"/>
               </v-btn>
             </v-flex>
           </v-form>

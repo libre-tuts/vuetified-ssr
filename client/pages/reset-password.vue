@@ -1,6 +1,6 @@
 <template>
 
-    <v-card :flat="true">
+    <v-card :flat="true" class="grey lighten-5">
       <v-toolbar class="accent">
         
         <v-spacer/>
@@ -21,19 +21,23 @@
                 offset-lg4 
                 xl4 
                 offset-xl4
+                d-flex
               >
+              <v-flex xs1>
+                <fa size="2x" class="mt-4 amber--text" icon="envelope" />
+              </v-flex>
+              <v-flex xs11>
                 <v-text-field
                   class="primary--text"
                   name="email"
                   v-model="form.email"
-                  prepend-icon="fas fa-envelope"
-                  counter="255"
                   :label="$t('email')"
                   :class="{ 'is-invalid': form.errors.has('email') }"
                   :rules="emailRules()"
                   readonly
                   disabled
                 />
+              </v-flex>
                 <has-error class="error--text pl-5" :form="form" field="email"></has-error>
               </v-flex>
             </v-layout>
@@ -47,20 +51,26 @@
                 offset-lg4 
                 xl4 
                 offset-xl4
+                d-flex
               >
+              <v-flex xs1>
+                <fa size="2x" class="mt-4 blue-grey--text" icon="lock" />
+              </v-flex>
+              <v-flex xs10>
                 <v-text-field
                   class="primary--text"
                   name="password"
                   v-model="form.password"
-                  :append-icon="passwordIcon"
-                  :append-icon-cb="() => (password_visible = !password_visible)"
                   :type="!password_visible ? 'password' : 'text'"
-                  prepend-icon="fas fa-lock"
-                  counter="255"
                   :label="$t('new_password')"
                   :class="{ 'is-invalid': form.errors.has('password') }"
                   :rules="passwordRules()"
                 />
+              </v-flex>
+               <v-flex xs1 text-xs-right>
+                <fa style="cursor:pointer;" size="2x" v-if="!password_visible" @click="password_visible = !password_visible" class="mt-4 red--text text--darken-4" icon="eye-slash" />
+                <fa style="cursor:pointer;" size="2x" v-else @click="password_visible = !password_visible" class="mt-4 blue--text text--lighten-2" icon="eye" />
+              </v-flex>
                 <has-error class="error--text pl-5" :form="form" field="password"></has-error>
               </v-flex>
             </v-layout>
@@ -74,21 +84,26 @@
                 offset-lg4 
                 xl4 
                 offset-xl4
+                d-flex
               >
-
+              <v-flex xs1>
+                <fa size="2x" class="mt-4 lime--text" icon="check-circle" />
+              </v-flex>
+              <v-flex xs10>
                 <v-text-field
                   class="primary--text"
                   name="password_confirmation"
                   v-model="form.password_confirmation"
-                  :append-icon="passwordConfirmationIcon"
-                  :append-icon-cb="() => (password_confirmation_visible = !password_confirmation_visible)"
                   :type="!password_confirmation_visible ? 'password' : 'text'"
-                  prepend-icon="fas fa-check-circle"
-                  counter="255"
                   :label="$t('confirm_password')"
                   :class="{ 'is-invalid': form.errors.has('password_confirmation') }"
                   :rules="passwordConfirmationRules()"
                 />
+              </v-flex>
+              <v-flex xs1 text-xs-right>
+                  <fa style="cursor:pointer;" size="2x" v-if="!password_confirmation_visible" @click="password_confirmation_visible = !password_confirmation_visible" class="mt-4 red--text text--darken-4" icon="eye-slash" />
+                <fa style="cursor:pointer;" size="2x" v-else @click="password_confirmation_visible = !password_confirmation_visible" class="mt-4 blue--text text--lighten-2" icon="eye" />
+                </v-flex>
                 <has-error class="error--text pl-5" :form="form" field="password_confirmation"></has-error>
               </v-flex>
             </v-layout>
@@ -110,7 +125,7 @@
                 block
               >
                 {{ $t('reset_password') }}
-                <v-icon small right :class="iconClass">fas fa-recycle</v-icon>
+                <fa pull="right" size="2x" :class="{'info--text': valid, 'disabled': !valid}" icon="recycle" />
               </v-btn>
             </v-flex>
           </v-form>

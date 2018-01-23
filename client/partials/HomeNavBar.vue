@@ -26,7 +26,7 @@
       to="/login"
     >
       <span :class="[titleClass]">{{ login }}</span>
-      <v-icon small right :class="[iconClass]">fas fa-sign-in-alt</v-icon>
+      <fa pull="right" :class="[iconClass]" icon="sign-in-alt" />
     </v-btn>
     <v-btn 
       v-if="!isAuthenticated"
@@ -35,7 +35,7 @@
       to="/register"
     >
       <span :class="[titleClass]">{{ register }}</span>
-      <v-icon small right :class="[iconClass]">fas fa-user-plus</v-icon>
+      <fa pull="right" flip="horizontal" :class="[iconClass]" icon="user-plus" />
     </v-btn>
     <v-btn 
       v-if="isAuthenticated"
@@ -44,7 +44,7 @@
       to="/dashboard"
     >
       <span :class="[titleClass]">{{ dashboard }}</span>
-      <v-icon small right :class="[iconClass]">fas fa-tachometer-alt</v-icon>
+      <fa pull="right" :class="[iconClass]" icon="tachometer-alt" />
     </v-btn>
     <v-btn 
       flat
@@ -52,7 +52,7 @@
       to="/contact-us"
     >
       <span :class="[titleClass]">{{ support }}</span>
-      <v-icon small right :class="[iconClass]">fas fa-life-ring</v-icon>
+      <fa pull="right" :class="[iconClass]" icon="life-ring" />
     </v-btn>
     <v-btn 
       v-if="isAuthenticated"
@@ -61,7 +61,7 @@
       @click.prevent="logoutUser()"
     >
       <span :class="[titleClass]">{{ logout }}</span>
-      <v-icon small right :class="[iconClass]">fas fa-sign-out-alt</v-icon>
+      <fa pull="right" :class="[iconClass]" icon="sign-out-alt" />
     </v-btn>
     
     <locale-dropdown text-color="white--text" :icon-color="[iconClass]"/>
