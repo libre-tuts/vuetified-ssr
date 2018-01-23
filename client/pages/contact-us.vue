@@ -4,24 +4,22 @@
         <v-btn 
           flat 
           icon 
-          color="white"
+          color="info"
           @click.native="redirectBack()"
         >
-          <v-icon>arrow_back</v-icon>
+          <v-icon :class="[iconClass]">fas fa-arrow-left</v-icon>
         </v-btn>
         <v-spacer/>
-        <v-toolbar-title class="text-xs-center white--text">{{ toolbarTitle }}</v-toolbar-title>
+        <v-toolbar-title :class="[titleClass]">{{ toolbarTitle }}</v-toolbar-title>
         <v-spacer/>
-        <v-toolbar-items>
-          <!-- If There is no User Account Login Yet Redirect to Authentication Page -->
-          <v-btn 
-            flat 
-            color="white" 
-            @click.native="goHome()"
-          >
-            <v-icon>home</v-icon>
-          </v-btn>
-        </v-toolbar-items>
+        <v-btn 
+          flat 
+          icon 
+          color="info"
+          @click.native="goHome()"
+        >
+          <v-icon :class="[iconClass]">fas fa-home</v-icon>
+        </v-btn>
       </v-toolbar>
       <v-card-text>
         <v-container fluid>
@@ -127,7 +125,7 @@
                     flat 
                     light 
                   >
-                    <v-card-title class="headline accent--text">{{ $t('contact_details') }}</v-card-title></v-card-title>
+                    <v-card-title class="headline accent--text">{{ $t('contact_details') }}</v-card-title>
                     <v-card-text class="headline accent--text">
                       <v-icon color="red">place</v-icon> {{ address }}
                     </v-card-text>
@@ -157,8 +155,13 @@
 </template>
 
 <script>
+import { VForm, VTextField } from 'vuetify'
 import { Form } from 'vform'
 export default {
+  components: {
+    VForm,
+    VTextField
+  },
   head () {
     return { title: this.$t('contact_us') }
   },
@@ -190,6 +193,13 @@ export default {
       return [
         (v) => !!v || this.$t('message_is_required')
       ]
+    },
+    titleClass: {
+      'white--text': true,
+      'text-xs-center': true
+    },
+    iconClass: {
+      'info--text': true
     }
   }),
   computed: {

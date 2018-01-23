@@ -12,7 +12,7 @@
       <span 
         class="hidden-sm-and-down" 
       >
-        <span :class="[textClass]">{{ title }}</span>
+        <span :class="[titleClass]">{{ title }}</span>
       </span>
     </v-toolbar-title>
     
@@ -25,8 +25,8 @@
       color="white"
       to="/login"
     >
-      <span :class="[textClass]">{{ login }}</span>
-      <fa icon="sign-in-alt" pull="right" size="lg" :class="[iconClass]"/>
+      <span :class="[titleClass]">{{ login }}</span>
+      <v-icon small right :class="[iconClass]">fas fa-sign-in-alt</v-icon>
     </v-btn>
     <v-btn 
       v-if="!isAuthenticated"
@@ -34,8 +34,8 @@
       color="white"
       to="/register"
     >
-      <span :class="[textClass]">{{ register }}</span>
-      <fa icon="user-plus" pull="right" size="lg" flip="horizontal" :class="[iconClass]"/>
+      <span :class="[titleClass]">{{ register }}</span>
+      <v-icon small right :class="[iconClass]">fas fa-user-plus</v-icon>
     </v-btn>
     <v-btn 
       v-if="isAuthenticated"
@@ -43,16 +43,16 @@
       color="white"
       to="/dashboard"
     >
-      <span :class="[textClass]">{{ dashboard }}</span>
-      <fa icon="tachometer-alt" pull="right" size="lg" flip="horizontal" :class="[iconClass]"/>
+      <span :class="[titleClass]">{{ dashboard }}</span>
+      <v-icon small right :class="[iconClass]">fas fa-tachometer-alt</v-icon>
     </v-btn>
     <v-btn 
       flat
       color="white"
       to="/contact-us"
     >
-      <span :class="[textClass]">{{ support }}</span>
-      <fa icon="life-ring" pull="right" size="lg" :class="[iconClass]"/>
+      <span :class="[titleClass]">{{ support }}</span>
+      <v-icon small right :class="[iconClass]">fas fa-life-ring</v-icon>
     </v-btn>
     <v-btn 
       v-if="isAuthenticated"
@@ -60,8 +60,8 @@
       color="white"
       @click.prevent="logoutUser()"
     >
-      <span :class="[textClass]">{{ logout }}</span>
-      <fa icon="sign-out-alt" pull="right" size="lg" :class="[iconClass]"/>
+      <span :class="[titleClass]">{{ logout }}</span>
+      <v-icon small right :class="[iconClass]">fas fa-sign-out-alt</v-icon>
     </v-btn>
     
     <locale-dropdown text-color="white--text" :icon-color="[iconClass]"/>
@@ -69,15 +69,17 @@
 </template>
 
 <script>
+import { VAvatar } from 'vuetify'
 import LocaleDropdown from '../components/LocaleDropdown'
 import { createNamespacedHelpers } from 'vuex'
 const { mapState } = createNamespacedHelpers('auth')
 export default {
   components: {
-    LocaleDropdown
+    LocaleDropdown,
+    VAvatar
   },
   data: () => ({
-    textClass: {
+    titleClass: {
       'white--text': true
     },
     iconClass: {

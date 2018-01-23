@@ -4,24 +4,22 @@
         <v-btn 
           flat 
           icon 
-          color="white" 
+          color="info" 
           @click.native="redirectBack()"
         >
-          <v-icon>arrow_back</v-icon>
+          <v-icon :class="[iconClass]">fas fa-arrow-left</v-icon>
         </v-btn>
         <v-spacer/>
-        <v-toolbar-title class="text-xs-center white--text">{{ toolbarTitle }}</v-toolbar-title>
+        <v-toolbar-title :class="[titleClass]">{{ toolbarTitle }}</v-toolbar-title>
         <v-spacer/>
-        <v-toolbar-items>
-          <!-- If There is no User Account Login Yet Redirect to Authentication Page -->
-          <v-btn 
-            flat 
-            color="white" 
-            @click.native="goHome()"
-          >
-            <v-icon>home</v-icon>
-          </v-btn>
-        </v-toolbar-items>
+        <v-btn 
+          flat 
+          icon 
+          color="info"
+          @click.native="goHome()"
+        >
+          <v-icon :class="[iconClass]">fas fa-home</v-icon>
+        </v-btn>
       </v-toolbar>
       <v-card-text style="padding-top:100px;">
         <v-container fluid>
@@ -174,11 +172,16 @@
 </template>
 
 <script>
+import { VForm, VTextField } from 'vuetify'
 import { Form } from 'vform'
 import { createNamespacedHelpers } from 'vuex'
 const { mapState } = createNamespacedHelpers('auth')
 
 export default {
+  components: {
+    VForm,
+    VTextField
+  },
   head () {
     return { title: this.$t('register') }
   },
@@ -213,6 +216,13 @@ export default {
       return [
         () => this.form.password_confirmation === this.form.password || this.$t('password_confirmation_rules')
       ]
+    },
+    titleClass: {
+      'white--text': true,
+      'text-xs-center': true
+    },
+    iconClass: {
+      'info--text': true
     }
 
   }),

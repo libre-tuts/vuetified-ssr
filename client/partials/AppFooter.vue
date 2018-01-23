@@ -5,7 +5,11 @@
 </template>
 
 <script>
+import { VFooter } from 'vuetify'
 export default {
+  components: {
+    VFooter
+  },
   computed: {
     app () {
       return this.$env.APP_NAME

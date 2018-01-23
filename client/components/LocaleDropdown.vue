@@ -13,9 +13,13 @@
 </template>
 
 <script>
+import { VMenu } from 'vuetify'
 import { mapGetters } from 'vuex'
 import { loadMessages } from '~/plugins/i18n'
 export default {
+  components: {
+    VMenu
+  },
   props: ['textColor', 'iconColor'],
   computed: mapGetters({
     locale: 'lang/locale',
