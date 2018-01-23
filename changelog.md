@@ -2,6 +2,14 @@
 
 ## Updates
 
+### Version 1.1.1
+- change icons to fontawesome 5, catch error on reset-password page and redirect to homepage
+- change fontawesome 5 support page , and change change icon on reset page
+- implement vue font-awesome component in all pages
+- remove v-icon
+- add disabled on forgot password and remove remaining v-icon
+- fix has-error message padding and place it under v-flex with v-text-field
+
 ### Version 1.1.0
 
 - added vuetify
