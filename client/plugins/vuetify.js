@@ -25,7 +25,6 @@ Vue.use(Vuetify, {
     VBtn,
     VCard,
     VGrid,
-    VIcon,
     VToolbar,
     VList,
     Vuetify,
