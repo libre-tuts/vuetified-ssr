@@ -1,13 +1,13 @@
 <template>
     <v-card :flat="true" class="grey lighten-5">
       <v-toolbar class="accent">
-        <v-btn 
+        <v-btn
           flat 
           icon 
           color="info"
           @click.native="redirectBack()"
         >
-          <v-icon :class="[iconClass]">fas fa-arrow-left</v-icon>
+          <fa size="2x" :class="[iconClass]" icon="arrow-left" />
         </v-btn>
         <v-spacer/>
         <v-toolbar-title :class="[titleClass]">{{ toolbarTitle }}</v-toolbar-title>
@@ -18,7 +18,7 @@
           color="info"
           @click.native="goHome()"
         >
-          <v-icon :class="[iconClass]">fas fa-home</v-icon>
+          <fa size="2x" :class="[iconClass]" icon="home" />
         </v-btn>
       </v-toolbar>
       <v-card-text style="padding-top:200px;">
@@ -70,7 +70,7 @@
                 block
               >
                 {{ $t('send_password_reset_link') }}
-                <fa pull="right" size="2x"  :class="[iconClass]" icon="link"/>
+                <fa pull="right" size="2x" :class="{'info--text': valid, 'disabled': !valid}" icon="link" />
               </v-btn>
             </v-flex>
           </v-form>
