@@ -1,9 +1,12 @@
+// eslint-disable-next-line
 const path = require('path')
+// eslint-disable-next-line
 const fs = require('fs-extra')
 
 /**
  * Copy dist files to public/ in spa mode.
  */
+// eslint-disable-next-line
 module.exports = function () {
     if (this.options.dev || this.options.mode !== 'spa') {
         return

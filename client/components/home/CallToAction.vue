@@ -58,16 +58,16 @@
 import Acl from '../../mixins/acl'
 
 export default {
-  mixins: [Acl],
-  data: () => ({
-    link: 'https://github.com/codeitlikemiley/vuetified'
-  }),
-  mounted () {
-    const self = this
-    if (self.isLoggedIn()) {
-      self.link = 'https://github.com/codeitlikemiley/vuetified'
+    mixins: [Acl],
+    data: () => ({
+        link: 'https://github.com/codeitlikemiley/vuetified'
+    }),
+    mounted () {
+        const self = this
+        if (self.isLoggedIn()) {
+            self.link = 'https://github.com/codeitlikemiley/vuetified'
+        }
     }
-  }
 }
 </script>
 
