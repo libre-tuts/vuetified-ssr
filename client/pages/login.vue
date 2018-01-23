@@ -50,8 +50,8 @@
                   :rules="emailRules()"
                   required
                 />
+                <has-error class="error--text" :form="form" field="email"></has-error>
               </v-flex>
-                <has-error class="error--text pl-5" :form="form" field="email"></has-error>
               </v-flex>
             </v-layout>
             <v-layout row>
@@ -81,12 +81,12 @@
                   :class="{ 'is-invalid': form.errors.has('password') }"
                   required
                 />
+                <has-error class="error--text" :form="form" field="password"></has-error>
               </v-flex>
               <v-flex xs1 text-xs-right>
                 <fa style="cursor:pointer;" size="2x" v-if="!password_visible" @click="password_visible = !password_visible" class="mt-4 red--text text--darken-4" icon="eye-slash" />
                 <fa style="cursor:pointer;" size="2x" v-else @click="password_visible = !password_visible" class="mt-4 blue--text text--lighten-2" icon="eye" />
               </v-flex>
-                <has-error class="error--text pl-5" :form="form" field="password"></has-error>
               </v-flex>
             </v-layout>
             <v-flex 

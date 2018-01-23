@@ -64,6 +64,7 @@
                             :class="{ 'is-invalid': form.errors.has('name') }"
                             :rules="nameRules()"
                           />
+                          <has-error class="error--text" :form="form" field="name"></has-error>
                           <v-text-field
                             light
                             name="email"
@@ -72,6 +73,7 @@
                             :class="{ 'is-invalid': form.errors.has('email') }"
                             :rules="emailRules()"
                           />
+                          <has-error class="error--text" :form="form" field="email"></has-error>
                           <v-text-field
                             light
                             name="subject"
@@ -80,6 +82,7 @@
                             :class="{ 'is-invalid': form.errors.has('subject') }"
                             :rules="subjectRules()"
                           />
+                          <has-error class="error--text" :form="form" field="subject"></has-error>
                           <v-text-field
                             light
                             name="message"
@@ -89,6 +92,7 @@
                             :class="{ 'is-invalid': form.errors.has('message') }"
                             :rules="messageRules()"
                           />
+                          <has-error class="error--text" :form="form" field="message"></has-error>
                           <v-btn 
                             :loading="form.busy"
                             :disabled="!valid" 

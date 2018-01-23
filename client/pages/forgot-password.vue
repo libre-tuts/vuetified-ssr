@@ -48,8 +48,8 @@
                   v-model="form.email"
                   :rules="emailRules()"
                 />
+                <has-error class="error--text" :form="form" field="email"></has-error>
               </v-flex>
-              <has-error class="error--text pl-5" :form="form" field="email"></has-error>
               </v-flex>
             </v-layout>
             <v-flex 
