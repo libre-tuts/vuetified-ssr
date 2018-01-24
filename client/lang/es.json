@@ -51,5 +51,7 @@
   "send": "Enviar",
   "contact_details": "Detalles de contacto",
   "subject_is_required": "El sujeto es requerido",
-  "message_is_required": "Mensaje es requerido"
+  "message_is_required": "Mensaje es requerido",
+  "bad_request": "Solicitud incorrecta",
+  "400_error": "Un error ocurrido en la página"
 }

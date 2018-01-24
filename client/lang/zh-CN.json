@@ -51,5 +51,7 @@
   "send": "发送",
   "contact_details": "联系方式",
   "subject_is_required": "主题是必需的",
-  "message_is_required": "信息是必需的"
+  "message_is_required": "信息是必需的",
+  "bad_request": "错误的请求",
+  "400_error": "页面上发生错误"
 }

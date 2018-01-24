@@ -51,5 +51,7 @@
   "send": "Send",
   "contact_details": "Contact Details",
   "subject_is_required": "Subject is Required",
-  "message_is_required": "Message is Required"
+  "message_is_required": "Message is Required",
+  "bad_request": "Bad Request",
+  "400_error": "An Error Occured On The Page"
 }
