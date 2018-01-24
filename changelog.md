@@ -2,6 +2,25 @@
 
 ## Updates
 
+### Version 1.1.3
+- added missing eslint-plugin-html
+- added a new notfound page
+- added graphql and grapql-ui for api
+- updated model namespace to App\Model
+- create new profiles table
+- added UsersTableSeeder
+- configure graphql configuration
+- updated config/auth for new user namespace
+- Create New Profile
+- added setPasswordAttribute in User Model
+- added profile relationship in User Model
+- remove photo_url in database, and move it to profile as avatar
+- move getters for photo_url to Profile Model as getAvatarAttribute
+- remove append avatar in Profile Model
+- uncomment route for Nuxt SPA Mode
+- Added GraphQl Namespace with Mutation, Query and Type
+- Bumped to v 1.1.3
+
 ### Version 1.1.2
 
 - added eslint configuration and fix code, added base64 roboto fonts and remove external links

@@ -7,11 +7,13 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
+        "rebing/graphql-laravel": "dev-master",
         "laravel/framework": "5.5.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "spatie/laravel-cors": "^1.0",
-        "tymon/jwt-auth": "^1.0.0-rc.1"
+        "tymon/jwt-auth": "^1.0.0-rc.1",
+        "noh4ck/graphiql": "@dev"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -20,13 +22,20 @@
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~6.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ardani/laravel-graphiql"
+        }
+    ],
     "autoload": {
         "classmap": [
             "database/seeds",
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Api\\": "api/"
         }
     },
     "autoload-dev": {

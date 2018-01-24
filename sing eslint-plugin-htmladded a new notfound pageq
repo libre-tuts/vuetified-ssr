@@ -1,0 +1,47 @@
+[33m82aa067[m added a new notfound page
+[33md569d55[m added missing eslint-plugin-html
+[33m2da1e26[m Bumped version to 1.1.2
+[33mb8a15bd[m eslint fix to lf and added ignore eslint comment to other node related globals
+[33m84742c9[m remove boostrap auth pages
+[33m1b093f5[m added eslint configuration and fix code, added base64 roboto fonts and remove external links
+[33m9b2920e[m Bumped version to 1.1.1
+[33m2f3b0a4[m fix has-error message padding and place it under v-flex with v-text-field
+[33m740f69a[m add disabled on forgot password and remove remaining v-icon
+[33m986a342[m remove v-icon
+[33md13704b[m remove v-icon
+[33m2db182e[m implement vue font-awesome component in all pages ,remove v-icon
+[33m60af4d4[m change fontawesome 5 support page , and change change icon on reset page
+[33m044d08d[m change icons to fontawesome 5, catch error on reset-password page and redirect to homepage
+[33m619e151[m Bumped version to 1.1.0
+[33m430f3c6[m Bumped version to 1.1.0
+[33m66705bb[m Bumped version to 1.0.1
+[33m44fa1e0[m  remove many of the vuetify components in global scope, only added required
+[33m29e30f1[m fix missing dashboard key
+[33m17b0be7[m added comment on fontawesome and nuxt config, included fontawesome 5 css
+[33m26375e8[m updated readme.md
+[33mc9effeb[m updated readme.md
+[33mc02424a[m added readme.md
+[33mca80d18[m added working contact page
+[33m1a67db2[m added support page
+[33m49a9be8[m added env var for SITE_ used in contact us page
+[33m7c67ae7[m added language for support page
+[33m62cc029[m fix reset-password link
+[33mb06a8db[m fix client/modules/spa for spa mode
+[33m66bb5ad[m change log updated
+[33m30e474b[m fix missing icons , added logout method on homenavbar
+[33m1cd127f[m added validation before submit on forgot-password and reset-password
+[33macb326c[m added forgot-password and reset-password page
+[33m149cd45[m added lang for validation in login and register form
+[33m3d68489[m added toolbarTitle
+[33m29500d0[m added toolbar Title
+[33m62b1a6d[m change primary to accent toolbar color for register
+[33m9154fba[m update to v 1.0.2 with fixes and added pages
+[33m52ad06e[m Bumped version to 1.0.2
+[33mf98af53[m edited change log
+[33m841e3da[m Bumped version to 1.0.1
+[33m5213ed5[m added language
+[33m245334a[m change me log added
+[33m368152e[m Bumped version to 1.1.0
+[33m4eb42c6[m Bumped version to 1.1.0
+[33m36ef0f8[m added vuetify
+[33ma70eea6[m laravel-nuxt

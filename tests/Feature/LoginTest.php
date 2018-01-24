@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\User;
+use App\Model\User;
 use Tests\TestCase;
 
 class LoginTest extends TestCase
 {
-    /** @var \App\User */
+    /** @var \App\Model\User */
     protected $user;
 
     public function setUp()

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Model\User;
 use App\OAuthProvider;
 use App\Http\Controllers\Controller;
 use App\Exceptions\EmailTakenException;
@@ -63,7 +63,7 @@ class OAuthController extends Controller
     /**
      * @param  string $provider
      * @param  \Laravel\Socialite\Contracts\User $sUser
-     * @return \App\User|false
+     * @return \App\Model\User|false
      */
     protected function findOrCreateUser($provider, $user)
     {
@@ -90,7 +90,7 @@ class OAuthController extends Controller
     /**
      * @param  string $provider
      * @param  \Laravel\Socialite\Contracts\User $sUser
-     * @return \App\User
+     * @return \App\Model\User
      */
     protected function createUser($provider, $sUser)
     {
