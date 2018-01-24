@@ -3,6 +3,7 @@
 ## Updates
 
 ### Version 1.1.3
+
 - added missing eslint-plugin-html
 - added a new notfound page
 - added graphql and grapql-ui for api
