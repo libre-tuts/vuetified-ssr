@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5470dd7fe98e21c791f73d7134516672",
+    "content-hash": "102902f658307bef3e9b067dcfddec4b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1286,13 +1286,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ardani/laravel-graphiql.git",
-                "reference": "00b31a1d7ec82da5b1ab1db3d10165d0401ddb34"
+                "url": "https://github.com/noh4ck/laravel-graphiql.git",
+                "reference": "3770b9476c061c623537c11cc7651abefd8aa129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ardani/laravel-graphiql/zipball/00b31a1d7ec82da5b1ab1db3d10165d0401ddb34",
-                "reference": "00b31a1d7ec82da5b1ab1db3d10165d0401ddb34",
+                "url": "https://api.github.com/repos/noh4ck/laravel-graphiql/zipball/3770b9476c061c623537c11cc7651abefd8aa129",
+                "reference": "3770b9476c061c623537c11cc7651abefd8aa129",
                 "shasum": ""
             },
             "require": {

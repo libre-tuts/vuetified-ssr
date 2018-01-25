@@ -22,12 +22,6 @@
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~6.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ardani/laravel-graphiql"
-        }
-    ],
     "autoload": {
         "classmap": [
             "database/seeds",
